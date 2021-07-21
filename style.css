@@ -1,0 +1,15 @@
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#addBtn {
+  display: block;
+  justify-content: center;
+}

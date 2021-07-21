@@ -11,13 +11,22 @@
 <body>
   <div class="title-container">
     <h1>Note Taker</h1>
-    <h3>Add A New Note : </h3>
+    <h3>Add A New Note</h3>
   </div>
-  <div class="note">Note : <input type="text" id="noteInput"></div>
+  <div class = "input-container">
+    <label class="note">Title : </label>
+    <input type="text" id="titleInput" value="">
+    <label class="note"> Content : </label>
+    <textarea type= "text" id="contentInput" cols="30" rows="10" value=""></textarea>
+  </div>
+
   <button id= "addBtn">Add Note</button>
-<div type='array' id="note-container">
   
-</div>
+  <hr>
+
+  <div id ="note-container">
+    
+  </div>
 
 </body>
 </html>
