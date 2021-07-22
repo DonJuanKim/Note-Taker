@@ -8,16 +8,26 @@ addBtn.addEventListener('click', () => {
   let note = document.createElement('div');
   let title = document.createElement('span');
   let content = document.createElement('span');
-  let details = document.createElement('button');
+  let detailBtn = document.createElement('button');
+  let removeBtn = document.createElement('button');
+
+
 
   title.innerHTML = titleInput;
   content.innerHTML = contentInput;
+  detailBtn.innerText = 'Details'
+  removeBtn.innerHTML = 'x'
   note.appendChild(title);
   note.appendChild(content);
-  note.appendChild(details);
+  note.appendChild(detailBtn);
+  note.appendChild(removeBtn);
 
-  details.innerText = 'Details'
+  title.className = 'noteTitle'
+  content.className = 'noteContent'
   note.className = 'note'
+  detailBtn.id = 'detailBtn'
+  removeBtn.id = 'removeBtn'
+
 
   noteContainer.appendChild(note);
 
