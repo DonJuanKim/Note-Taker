@@ -156,6 +156,7 @@ span {
   right: 10px;
   top: 5px;
   font-size: 30px;
+  background-color: transparent;
 }
 
 #overlay {
