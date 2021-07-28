@@ -1,25 +1,31 @@
-const addBtn = document.getElementById('addBtn');
+const addNote = document.getElementById('addNote');
 const noteContainer = document.getElementById('note-container');
 const removeBtn = document.getElementById('removeBtn');
+const popUpTitle = document.getElementById('popUpTitle');
+const popUpBody = document.getElementById('popUpBody');
 
-addBtn.addEventListener('click', () => {
-  let titleInput = document.getElementById('titleInput').value;
-  let contentInput = document.getElementById('contentInput').value;
-  let note = document.createElement('div');
-  let title = document.createElement('span');
-  let content = document.createElement('span');
-  let detailBtn = document.createElement('button');
-  let removeBtn = document.createElement('button');
+addNote.addEventListener('click', () => {
+  
+  //  create notes
+
+  let titleInput = document.getElementById('titleInput').value,
+  contentInput = document.getElementById('contentInput').value,
+  note = document.createElement('div'),
+  title = document.createElement('span'),
+  content = document.createElement('span'),
+  detailBtn = document.createElement('button'),
+  removeBtn = document.createElement('button'),
+  closePopUp = document.getElementById('closePopUp');
 
   title.innerHTML = titleInput;
   content.innerHTML = contentInput;
-  detailBtn.innerText = 'Details';
-  removeBtn.innerHTML = 'x';
+  detailBtn.innerHTML = 'Details';
+  removeBtn.innerHTML = '&times';
   note.appendChild(title);
   note.appendChild(content);
   note.appendChild(detailBtn);
   note.appendChild(removeBtn);
-
+  
   title.className = 'noteTitle';
   content.className = 'noteContent';
   note.className = 'note';
@@ -28,16 +34,30 @@ addBtn.addEventListener('click', () => {
   removeBtn.id = 'removeBtn';
   
   noteContainer.appendChild(note);
+  
+  //  remove button
 
-//  remove button
   removeBtn.addEventListener('click', () => {
     note.remove();
-  })
+  });
+  
+  //  popup for detail
 
-//  detail button
   detailBtn.addEventListener('click', () => {
-    alert('Full text'+ content);
+    popUp = document.getElementById('popUp'),
+    popUp.className = 'popUp-active';
+    popUpTitle.innerHTML = titleInput;
+    popUpBody.innerHTML = contentInput;
+  });
 
-  })
-});  
+  //  close popup
+
+  closePopUp.addEventListener('click', () => {
+    popUp = document.getElementById('popUp'),
+    popUp.className = 'popUp';
+  });
+
+});
+
+
 

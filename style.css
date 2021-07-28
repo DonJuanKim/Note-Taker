@@ -1,27 +1,62 @@
+* {
+  font-family: 'Roboto Condensed';
+}
+body {
+  background-color: #37474f;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--white-color);
+}
+
+:root {
+  /* Color */
+  --white-color: #cfcfcf;
+  --black-color: #212121;
+  --orange-color: #f9a825;
+  --dark-blue-grey-color: #1c313a;
+  --light-blue-grey-color: #718792;
+
+  /* Font Size */
+  --font-large: 25px;
+  --font-medium: 17px;
+  --font-small: 12px;
+  --font-micro: 10px;
+};
+
+
 .title-container {
   display: block;
 }
 
 h1 {
+  color: var(--white-color);
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
 
 }
 
 h3 {
-  display: flex;
-  justify-content: center;
+  color: var(--white-color);
+  font-size: 25px;
 }
 
 .input-container {
+  color: var(--white-color);;
   position: relative;
-  left: 42%; 
   display: flex;
   flex-direction: column;
-
 }
 
 #titleInput {
   width: 300px;
 }
+
+
 
 #contentInput {
   width: 300px;
@@ -40,7 +75,9 @@ h3 {
   flex-direction: column;
   padding: 25px;
   margin: 10px;
-  border: 2px solid red;
+  color: var(--black-color);
+  background-color: var(--orange-color);
+  font-size:var(--font-medium);
   width: 200px;
   height: 200px;
 }
@@ -71,10 +108,68 @@ span {
   top: -180px;
   right : -105px;
   width : 30px;
+  background-color: transparent;
+  font-size: 20px;
 }
 #detailBtn {
   position: relative;
   top: 20px;
   left : 55px;
   width: 80px;
+}
+
+#addNote {
+  margin: 10px;
+}
+
+.popUp > * {
+  transform : translate(-50%, -50%) scale(0);
+}
+
+.popUp-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  word-break: break-all;
+}
+
+.popUp-body {
+  padding: 10px;
+}
+
+.popUp-active {
+  position : fixed;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%, -50%) scale(1);
+  border : 1px solid var(--black-color);
+  border-radius: 4px;
+  z-index: 10;
+  background-color:var(--white-color);  
+  width: 500px;
+  max-width: 80%;
+  word-break: break-all;
+}
+
+#closePopUp {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 30px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay .active {
+  opacity: 1;
+  pointer-events: all;
 }

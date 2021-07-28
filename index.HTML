@@ -7,6 +7,10 @@
   <title>Note Taker</title>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <div class="title-container">
@@ -20,13 +24,22 @@
     <textarea type= "text" id="contentInput" cols="30" rows="10" value=""></textarea>
   </div>
 
-  <button id= "addBtn">Add Note</button>
+  <button id= "addNote">Add Note</button>
   
   <hr>
 
-  <div id ="note-container">
-    
-  </div>
+  <div id ="note-container"></div>
 
+  <div class="popUp" id="popUp">
+    <div class="popUp-header">
+      <div id="popUpTitle" class="popUpTitle"> title here</div>
+      <button id="closePopUp">&times;</button>
+    </div>
+    <div id="popUpBody" class="popUp-body">
+      content here
+    </div>
+    <div id="overlay">
+    </div>
+  </div>
 </body>
 </html>
