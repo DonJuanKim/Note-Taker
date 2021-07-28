@@ -44,8 +44,9 @@ addNote.addEventListener('click', () => {
   //  popup for detail
 
   detailBtn.addEventListener('click', () => {
-    popUp = document.getElementById('popUp'),
+    popUp = document.getElementById('popUp');
     popUp.className = 'popUp-active';
+
     popUpTitle.innerHTML = titleInput;
     popUpBody.innerHTML = contentInput;
   });
@@ -53,7 +54,7 @@ addNote.addEventListener('click', () => {
   //  close popup
 
   closePopUp.addEventListener('click', () => {
-    popUp = document.getElementById('popUp'),
+    popUp = document.getElementById('popUp');
     popUp.className = 'popUp';
   });
 
